@@ -1,0 +1,63 @@
+body {
+    background-image: url("PS2MainPage.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+    background-attachment: fixed;
+    background-position: 50% 95%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #93ac73;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #53652d;
+}
+#logo{
+    width: auto;
+    height: auto;
+    max-width: 40px;
+    max-height: 40px;
+}
+.optionA{
+    background-color: #ab2a03;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Dancing Script', cursive;
+    opacity: 0.8;
+    
+}
+.optionA:hover{
+    opacity: 1;
+    margin: 15px;
+    padding: 30px;
+}
+.optionB{
+    background-color: #ab2a03;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Dancing Script', cursive;
+    opacity: 0.8;
+}
+.optionB:hover{
+    opacity: 1;
+    margin: 15px;
+    padding: 30px;
+}
+
+.btnOpts{
+    text-align: center;
+}
+
