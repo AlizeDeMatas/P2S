@@ -1,0 +1,25 @@
+body {
+  
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+    background-attachment: fixed;
+    background-position: 50% 95%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #93ac73;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #53652d;
+}
+#logo{
+    width: auto;
+    height: auto;
+    max-width: 40px;
+    max-height: 40px;
+}

@@ -1,0 +1,73 @@
+
+.form-style {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style input[type=text],
+.form-style input[type=date],
+.form-style input[type=time],
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+}
+.form-style input[type=text]:focus,
+.form-style input[type=date]:focus,
+.form-style input[type=time]:focus,
+.form-style select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+
+
+
+.form-style .field-long{
+	width: 100%;
+}
+
+li select{
+  width: 100%;
+}
+
+.form-style input[type=submit]{
+	background-color: #ab2a03;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Dancing Script', cursive;
+    opacity: 0.8;
+}
+.form-style input[type=submit]:hover{
+  opacity: 1;
+  margin: 15px;
+  padding: 30px;
+}
+
+}
