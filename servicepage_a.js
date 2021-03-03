@@ -105,9 +105,9 @@ $(document).ready(function() {
           text: 'Subaru BRZ'
         }));
         $('#car-type').append($('<option>', {
-          id: 'Honda-Civic',
-          value: 'Honda-Civic',
-          text: 'Honda Civic'
+          id: 'Ford-Mustang',
+          value: 'Ford-Mustang',
+          text: 'Ford Mustang'
         }));
         $('#car-type').append($('<option>', {
           id: 'Mazda-MX-5-Miata',
@@ -115,9 +115,9 @@ $(document).ready(function() {
           text: 'Mazda MX-5 Miata'
         }));
         $('#car-type').append($('<option>', {
-          id: 'Volkswagen-GTI',
-          value: 'Volkswagen-GTI',
-          text: 'Volkswagen GTI'
+          id: 'Nissan-GT-R',
+          value: 'Nissan-GT-R',
+          text: 'Nissan GT-R'
         }));
         break;
       default:
@@ -134,6 +134,6 @@ $(document).ready(function() {
 
 
 $("select.car-type").change(function(){
-        var selectedCountry = $(this).children("option:selected").attr('id');
-        alert("You have selected the country - " + selectedCountry);
+        var selectedcar = $(this).children("option:selected").attr('id');
+        $(".car_img").attr("src","carimages/" +selectedcar + ".png");
     });
