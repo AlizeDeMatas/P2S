@@ -50,7 +50,7 @@
 </ul>
 </form>
 
-<img class="car_img" src="carimages/Chrysler-Pacifica.png" alt="">
+<img class="car_img" src="./assets/carimages/Chrysler-Pacifica.png" alt="">
 
 
 
