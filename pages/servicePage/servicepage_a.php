@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="servicepage_a.css" type="text/css">
 <body style="background-color: #e1bc91;">
-<?php include 'header.html';?>
+<?php include '../header/header.html';?>
 <h1>CAR RIDE SERVICE</h1>
 <h2>Fill out the form to ride to your destination!</h2>
 
@@ -50,12 +50,12 @@
 </ul>
 </form>
 
-<img class="car_img" src="./assets/carimages/Chrysler-Pacifica.png" alt="">
+<img class="car_img" src="../../assets/carimages/Chrysler-Pacifica.png" alt="">
 
 
 
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script type="text/javascript" src="servicepage_a.js"></script>
+   <script type="text/javascript" src="./servicepage_a.js"></script>
 
 </body>
 </html>

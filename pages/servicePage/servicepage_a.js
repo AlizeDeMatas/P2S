@@ -135,5 +135,5 @@ $(document).ready(function() {
 
 $("select.car-type").change(function(){
         var selectedcar = $(this).children("option:selected").attr('id');
-        $(".car_img").attr("src","./assets/carimages/" +selectedcar + ".png");
+        $(".car_img").attr("src","../../assets/carimages/" + selectedcar + ".png");
     });
