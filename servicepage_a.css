@@ -1,4 +1,12 @@
+body{
+	background-color: #e1bc91;
+}
 
+.car_img{
+	height: 300px;
+	width: 400px;
+
+}
 
 .form-style {
 	margin:10px auto;
@@ -38,10 +46,10 @@ select{
 .form-style input[type=date]:focus,
 .form-style input[type=time]:focus,
 .form-style select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
+	-moz-box-shadow: 0 0 8px #ab2a03;
+	-webkit-box-shadow: 0 0 8px #ab2a03;
+	box-shadow: 0 0 8px #ab2a03;
+	border: 1px solid #ab2a03;
 }
 
 

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="servicepage_a.css" type="text/css">
-<body style="background-color: #e1bc91;">
-<?php include 'header.html';?>
+<body>
+  <?php
+  include('header.html');
+  ?>
+  <style>
+    <?php include 'servicepage_a.css'; ?>
+</style>
+
 <h1>CAR RIDE SERVICE</h1>
 <h2>Fill out the form to ride to your destination!</h2>
 
