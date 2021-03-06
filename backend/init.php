@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "root";
+$password = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -12,16 +12,25 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-// Create database
-$sql = "CREATE DATABASE myDB";
-if ($conn->query($sql) === TRUE) {
-  echo "Database created successfully";
-} else {
-  echo "Error creating database: " . $conn->error;
+// Make my_db the current database
+$db_selected=$conn->select_db('p2s');
+
+// Create database if it does not exist
+if (!$db_selected) {
+    // If we couldn't, then it either doesn't exist, or we can't see it.
+    $sql = "CREATE DATABASE p2s";
+    if ($conn->query($sql) === TRUE) {
+      echo "Database created successfully";
+    } else {
+      echo "Error creating database: " . $conn->error;
+    }
 }
 
+mysqli_select_db($conn, 'p2s');
+
+
 // sql to create user table
-$sql_user = "CREATE TABLE user (
+$sql_user = "CREATE TABLE IF NOT EXISTS user (
     user_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
@@ -34,18 +43,18 @@ $sql_user = "CREATE TABLE user (
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
-$sql_order = "CREATE TABLE order (
-    order_id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    date_issue TIMESTAMP DEFAULT,
-    date_done TIMESTAMP DEFAULT,
+$sql_order = "CREATE TABLE IF NOT EXISTS orders (
+    order_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    date_issue TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    date_done TIMESTAMP NULL DEFAULT NULL,
     total_price decimal(15,2) NOT NULL,
-    payment_code VARCHAR(30),
+    payment_code INT(6) NOT NULL,
     user_id INT(6) UNSIGNED NOT NULL,
     trip_id INT(9) UNSIGNED,
     flower_id INT(9) UNSIGNED
 )";
 
-$sql_trip = "CREATE TABLE trip(
+$sql_trip = "CREATE TABLE IF NOT EXISTS trip  (
     trip_id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     source_lat INT(9) NOT NULL,
     source_lon INT(9) NOT NULL,
@@ -56,37 +65,29 @@ $sql_trip = "CREATE TABLE trip(
     car_id INT(9) UNSIGNED
 )";
 
-$sql_car = "CREATE TABLE car (
+$sql_car = "CREATE TABLE IF NOT EXISTS car (
     car_id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     car_type VARCHAR(255) NOT NULL, /* THIS represents the model of the car such as Tesla model S */
-    car_model  VARCHAR(255) NOT NULL, /* THIS represents like if its a sudan */
+    car_model VARCHAR(255) NOT NULL, /* THIS represents like if its a sudan */
     availability_code Boolean NOT NULL
 )";
 
-$sql_flower = "CREATE TABLE flower (
+$sql_flower = "CREATE TABLE IF NOT EXISTS flower (
     flower_id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    store_name VARCHAR (255) NOT NULL,
-    store_lat INT(9) UNSIGNED NOT NULL, /* long/lat? */
-    store_lon INT(9) UNSIGNED NOT NULL, /
-    price decimal(15,2) NOT NULL,
+    store_lat INT(9) UNSIGNED NOT NULL,
+    store_lon INT(9) UNSIGNED NOT NULL, 
+    price decimal(15,2) NOT NULL
 )";
 
+$queries = array($sql_user, $sql_order, $sql_trip, $sql_car, $sql_flower);
 
-/*
-Trip table:-Trip-Id (unique key), Source Code, Destination Code, Distance (km), Car-Id, Price, ... 
-
-Car table:-Car-Id (primary key), Car Model, Car Code, Availability Code, ...
-
-Flower table:-Flower-Id (unique key), Store Code, Price, .
-
-*/
-
-if ($conn->query($sql_user) === TRUE) {
-    echo "Table users created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
+foreach ($queries as &$q) {
+    if ($conn->query($q) === TRUE) {
+        //tables created so dont display anything
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
 }
-
 
 
 ?>
