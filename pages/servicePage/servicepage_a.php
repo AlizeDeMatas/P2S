@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="servicepage_a.css" type="text/css">
 <body style="background-color: #e1bc91;">
 <?php include '../header/header.html';?>
+<?php include '../header/header.css';?>
+
 <h1>CAR RIDE SERVICE</h1>
 <h2>Fill out the form to ride to your destination!</h2>
 

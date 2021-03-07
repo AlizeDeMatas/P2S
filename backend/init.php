@@ -20,7 +20,7 @@ if (!$db_selected) {
     // If we couldn't, then it either doesn't exist, or we can't see it.
     $sql = "CREATE DATABASE p2s";
     if ($conn->query($sql) === TRUE) {
-      echo "Database created successfully";
+      echo "Database created successfully \n";
     } else {
       echo "Error creating database: " . $conn->error;
     }
@@ -32,14 +32,14 @@ mysqli_select_db($conn, 'p2s');
 // sql to create user table
 $sql_user = "CREATE TABLE IF NOT EXISTS user (
     user_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    address VARCHAR(50) NOT NULL,
-    postal VARCHAR(56) NOT NULL,
-    login_id VARCHAR(56) NOT NULL, 
-    password VARCHAR(56) NOT NULL, 
-    balance decimal(15,2) NOT NULL,
+    firstname VARCHAR(30),
+    lastname VARCHAR(30),
+    email VARCHAR(50),
+    address VARCHAR(50),
+    postal VARCHAR(56),
+    username VARCHAR(56) NOT NULL, 
+    password VARCHAR(255) NOT NULL, 
+    balance decimal(15,2),
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
@@ -89,5 +89,6 @@ foreach ($queries as &$q) {
     }
 }
 
+$conn -> close();
 
 ?>

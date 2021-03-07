@@ -1,39 +1,37 @@
-<?php 
+<?php
 session_start();
-require '../../backend/db_connection.php';
-require '../../backend/insert_user.php';
+require '../P2S/backend/db_connection.php';
+require '../P2S/backend/login.php';
 // IF USER LOGGED IN
-if(isset($_SESSION['user_email'])){
-header('Location: home.php');
+if(isset($_SESSION['email'])){
+header('Location: index.php');
 exit;
 }
 ?>
+<?php include('./pages/header/header.html')?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign Up - P2S</title>
+<title>Login - P2S</title>
 <link rel="stylesheet" href="style.css" media="all" type="text/css">
 </head>
 
 <body>
 
 <form action="" method="post">
-<h2>Create an account</h2>
+<h2>User Login</h2>
 
 <div class="container">
-<label for="username"><b>Username</b></label>
-<input type="text" placeholder="Enter username" id="username" name="username" required>
-
 <label for="email"><b>Email</b></label>
 <input type="email" placeholder="Enter email" id="email" name="email" required>
 
 <label for="password"><b>Password</b></label>
 <input type="password" placeholder="Enter password" id="password" name="password" required>
 
-<button type="submit">Sign Up</button>
+<button type="submit">Login</button>
 </div>
 <?php
 if(isset($success_message)){
@@ -44,7 +42,7 @@ echo '<div class="error_message">'.$error_message.'</div>';
 }
 ?>
 <div class="container" style="background-color:#f1f1f1">
-<a href="index.php"><button type="button" class="Regbtn">Login</button></a>
+<a href="signup.php"><button type="button" class="Regbtn">Create an account</button></a>
 </div>
 </form>
 </body></html>
