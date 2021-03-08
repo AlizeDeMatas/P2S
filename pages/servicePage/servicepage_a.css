@@ -1,4 +1,19 @@
 
+#map{
+	height: 300px;
+	width: 400px;
+}
+
+#main, #side {float:left; display:inline; width: 49%;}
+
+figcaption{
+	font-weight: bolder;
+	font-size: 1.5rem;
+}
+
+.car_img{
+	width: 60%;
+}
 
 .form-style {
 	margin:10px auto;
@@ -38,10 +53,10 @@ select{
 .form-style input[type=date]:focus,
 .form-style input[type=time]:focus,
 .form-style select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
+	-moz-box-shadow: 0 0 8px #ab2a03;
+	-webkit-box-shadow: 0 0 8px #ab2a03;
+	box-shadow: 0 0 8px #ab2a03;
+	border: 1px solid #ab2a03;
 }
 
 
