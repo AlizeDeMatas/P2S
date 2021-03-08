@@ -9,9 +9,11 @@
 
     <!-- Link skeleton html file -->
     <?php include '../header/skeleton.html';?>
-
+    <link rel="stylesheet" type="text/css" href="../header/header.css">
+    
     <!-- Link style.css file -->
     <link rel="stylesheet" type="text/css" href="servicepage_a.css">
+
 
 </head>
 <body>
@@ -69,7 +71,9 @@
 
 <div id="side">
   <figure>
+    <div class="car_img_wrapper">
     <img class="car_img" src="../../assets/carimages/Chrysler-Pacifica.png" alt="">
+    </div>
     <figcaption></figcaption>
   </figure>
 

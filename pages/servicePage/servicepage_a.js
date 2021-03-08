@@ -156,4 +156,4 @@ $("select.car-type").change(function(){
         $(".car_img").attr("src","../../assets/carimages/" +selectedcar + ".png");
         $("figcaption").text("$ " + selectedprice);
 
-    });
+});

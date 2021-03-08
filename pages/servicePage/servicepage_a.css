@@ -10,9 +10,17 @@ figcaption{
 	font-weight: bolder;
 	font-size: 1.5rem;
 }
-
+.car_img_wrapper {
+	width:100%;
+    height:250px;
+    display:flex;
+    overflow:hidden
+}
 .car_img{
-	width: 60%;
+	flex-shrink:0;
+    -webkit-flex-shrink: 0;
+    max-width:70%;
+    max-height:90%;
 }
 
 .form-style {
