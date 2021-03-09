@@ -10,7 +10,7 @@
     <!-- Link skeleton html file -->
     <?php include '../header/skeleton.html';?>
     <link rel="stylesheet" type="text/css" href="../header/header.css">
-    
+
     <!-- Link style.css file -->
     <link rel="stylesheet" type="text/css" href="servicepage_a.css">
 
@@ -24,7 +24,7 @@
 <div id="main">
 
 
-<form method="post" action="../shoppingCart/shoppingcart.php">
+<form method="POST" action="../shoppingCart/shoppingcart.php">
 <ul class="form-style">
   <li>
       <label class="car-models" for="car-models">Available Car Models</label>
@@ -63,7 +63,7 @@
     </li>
 
     <li>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"  name="Add_To_Cart"/>
     </li>
 </ul>
 </form>
@@ -74,7 +74,7 @@
     <div class="car_img_wrapper">
     <img class="car_img" src="../../assets/carimages/Chrysler-Pacifica.png" alt="">
     </div>
-    <figcaption></figcaption>
+    <figcaption name="price"></figcaption>
   </figure>
 
   <div id="map"></div>
