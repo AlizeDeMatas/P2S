@@ -37,8 +37,8 @@ $sql_user = "CREATE TABLE IF NOT EXISTS user (
     email VARCHAR(50),
     address VARCHAR(50),
     postal VARCHAR(56),
-    username VARCHAR(56) NOT NULL, 
-    password VARCHAR(255) NOT NULL, 
+    username VARCHAR(56) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     balance decimal(15,2),
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
@@ -75,7 +75,7 @@ $sql_car = "CREATE TABLE IF NOT EXISTS car (
 $sql_flower = "CREATE TABLE IF NOT EXISTS flower (
     flower_id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     store_lat INT(9) UNSIGNED NOT NULL,
-    store_lon INT(9) UNSIGNED NOT NULL, 
+    store_lon INT(9) UNSIGNED NOT NULL,
     price decimal(15,2) NOT NULL
 )";
 
@@ -87,6 +87,15 @@ foreach ($queries as &$q) {
     } else {
         echo "Error creating table: " . $conn->error;
     }
+}
+
+$sql = "INSERT INTO car (car_type, car_model, availability_code)
+VALUES ('Chevrolet-Express-1500', 'Mini-Van', 1);";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn -> close();

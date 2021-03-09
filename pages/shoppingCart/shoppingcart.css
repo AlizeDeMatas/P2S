@@ -1,4 +1,4 @@
-#div1, #side {
+#div1, #div2 {
   float:left;
   display:inline;
   width: 47%;
@@ -26,6 +26,6 @@
 .flex-container > div {
   background-color: #f1f1f1;
   margin: 5px;
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
 }

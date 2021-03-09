@@ -14,6 +14,8 @@
     <!-- Link style.css file -->
     <link rel="stylesheet" type="text/css" href="shoppingcart.css">
 
+    <script src="https://kit.fontawesome.com/6380b36795.js" crossorigin="anonymous"></script>
+
     <script>
     function allowDrop(ev) {
       ev.preventDefault();
@@ -40,7 +42,7 @@
 
 </div>
 
-<div id="side">
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
   <h1>Orders</h1>
 
   <div>
@@ -54,7 +56,31 @@
         <p>Mini-Van</p>
         <p>$40.50/ hour drive</p>
      </div>
-      <div>1</div>
+      <div><i class="fas fa-plus-circle"></i> <i class="fas fa-minus-circle"></i></div>
+    </div>
+
+    <div class="flex-container" id="drag2" src="ieee_mb_blue.gif" draggable="true" ondragstart="drag(event)" >
+      <div>
+        <img class= "images" src="../../assets/shopimages/doughnut.jpg" alt="">
+      </div>
+      <div>
+        <h3>Tim Hortons</h3>
+        <p>Sprinkle Doughnut</p>
+        <p>$1.99</p>
+     </div>
+      <div><i class="fas fa-plus-circle"></i> <i class="fas fa-minus-circle"></i></div>
+    </div>
+
+    <div class="flex-container" id="drag3" src="ieee_mb_blue.gif" draggable="true" ondragstart="drag(event)" >
+      <div>
+        <img class= "images" src="../../assets/shopimages/timscoffee.jpg" alt="">
+      </div>
+      <div>
+        <h3>Tim Hortons</h3>
+        <p>Coffee (size: small)</p>
+        <p>$1.00</p>
+     </div>
+      <div><i class="fas fa-plus-circle"></i> <i class="fas fa-minus-circle"></i></div>
     </div>
 
 
