@@ -8,6 +8,9 @@ header('Location: home.php');
 exit;
 }
 ?>
+    <?php include '../header/skeleton.html';?>
+    <link rel="stylesheet" type="text/css" href="../header/header.css">
+
 <!DOCTYPE html>
 <html lang="en">
 
