@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #93ac73;
+}
+
+#alizePic{
+    width: 229px;
+    height: 218px;
+    background-position: 25% 35%;
+  
+}
+#homPic{
+    width: 229px;
+    height: 221px;
+    background-position: 25% 55%;
+   
+}
+
+#saadPic{
+    width: 229px;
+    height: 216px;
+    background-position: 25%  75%;
+ 
+}
+#pics{
+    background-position: center;
+}
